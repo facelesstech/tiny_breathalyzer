@@ -1,0 +1,165 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20SU U3
+U 1 1 5E4A7D91
+P 5450 2950
+F 0 "U3" H 4920 2996 50  0000 R CNN
+F 1 "ATtiny85-20SU" H 4920 2905 50  0000 R CNN
+F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 5450 2950 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 5450 2950 50  0001 C CNN
+	1    5450 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L mq3:mq3_custom U4
+U 1 1 5E4A7E41
+P 6300 1900
+F 0 "U4" H 6528 2240 50  0000 L CNN
+F 1 "mq3_custom" H 6528 2149 50  0000 L CNN
+F 2 "sensors_custom:mq-3_custom_blue" H 6300 1900 50  0001 C CNN
+F 3 "" H 6300 1900 50  0001 C CNN
+	1    6300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4digitLED:4digitLED U2
+U 1 1 5E4A7F80
+P 4650 1900
+F 0 "U2" H 4878 2315 50  0000 L CNN
+F 1 "4digitLED" H 4878 2224 50  0000 L CNN
+F 2 "screens:4digitLED_custom" H 4650 1900 50  0001 C CNN
+F 3 "" H 4650 1900 50  0001 C CNN
+	1    4650 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5E4A8071
+P 6700 2650
+F 0 "SW1" H 6700 2935 50  0000 C CNN
+F 1 "SW_Push" H 6700 2844 50  0000 C CNN
+F 2 "buttons_custom:SMD_2pin_button_custom" H 6700 2850 50  0001 C CNN
+F 3 "" H 6700 2850 50  0001 C CNN
+	1    6700 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2200 6100 2200
+Wire Wire Line
+	6100 3050 6050 3050
+Wire Wire Line
+	4700 2000 4700 2200
+Wire Wire Line
+	4800 2000 4800 2150
+Wire Wire Line
+	4800 2150 6200 2150
+Wire Wire Line
+	6200 2150 6200 2950
+Wire Wire Line
+	6200 2950 6050 2950
+Wire Wire Line
+	6900 2650 6900 3550
+$Comp
+L battery_custom:battery_custom U1
+U 1 1 5E4A8FEF
+P 3200 3000
+F 0 "U1" V 3465 3069 50  0000 C CNN
+F 1 "battery_custom" V 3374 3069 50  0000 C CNN
+F 2 "battery_connector_custom:jst_2pin_custom" H 3200 3000 50  0001 C CNN
+F 3 "" H 3200 3000 50  0001 C CNN
+	1    3200 3000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5450 2350 4600 2350
+Wire Wire Line
+	4050 2350 4050 2850
+Connection ~ 5450 3550
+Wire Wire Line
+	6100 2200 6100 2650
+Wire Wire Line
+	6100 2650 6100 3050
+Wire Wire Line
+	6050 2650 6500 2650
+Wire Wire Line
+	4600 2000 4600 2350
+Connection ~ 4600 2350
+Wire Wire Line
+	4600 2350 4050 2350
+Wire Wire Line
+	4500 2000 4500 3550
+Connection ~ 4500 3550
+Wire Wire Line
+	4500 3550 5450 3550
+Wire Wire Line
+	5450 3550 6250 3550
+Wire Wire Line
+	6150 2000 5450 2000
+Wire Wire Line
+	5450 2000 5450 2350
+Connection ~ 5450 2350
+Wire Wire Line
+	6250 2000 6250 3550
+Connection ~ 6250 3550
+Wire Wire Line
+	6250 3550 6900 3550
+Wire Wire Line
+	6450 2000 6450 2850
+Wire Wire Line
+	6450 2850 6050 2850
+$Comp
+L Switch:SW_Push_SPDT SW2
+U 1 1 5E4BBA6C
+P 3750 2950
+F 0 "SW2" H 3750 3235 50  0000 C CNN
+F 1 "SW_Push_SPDT" H 3750 3144 50  0000 C CNN
+F 2 "buttons_custom:latch_switch_7x7" H 3750 2950 50  0001 C CNN
+F 3 "" H 3750 2950 50  0001 C CNN
+	1    3750 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2950 3550 2950
+Wire Wire Line
+	3950 2850 4050 2850
+Wire Wire Line
+	3300 3550 4500 3550
+Wire Wire Line
+	3300 3050 3300 3550
+$Comp
+L m3_standoffs:m3_standsoffs U5
+U 1 1 5E4BCB84
+P 2200 1300
+F 0 "U5" H 2258 1335 50  0000 L CNN
+F 1 "m3_standsoffs" H 2258 1244 50  0000 L CNN
+F 2 "m3_hole_custom:m3_hole_custom" H 2200 1300 50  0001 C CNN
+F 3 "" H 2200 1300 50  0001 C CNN
+	1    2200 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L m3_standoffs:m3_standsoffs U6
+U 1 1 5E4BCC30
+P 2200 1500
+F 0 "U6" H 2258 1535 50  0000 L CNN
+F 1 "m3_standsoffs" H 2258 1444 50  0000 L CNN
+F 2 "m3_hole_custom:m3_hole_custom" H 2200 1500 50  0001 C CNN
+F 3 "" H 2200 1500 50  0001 C CNN
+	1    2200 1500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
