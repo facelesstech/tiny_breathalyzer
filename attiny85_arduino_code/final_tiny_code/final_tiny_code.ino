@@ -116,18 +116,20 @@ void loop() {
     display.clear();                      // clear the display
         display.print(warmupNumber); // print SUCC for success
 //      delay(600);        // delay in between reads for stability
-      delay(600);        // delay in between reads for stability
+      delay(850);        // delay in between reads for stability
         warmupNumber++;
     } 
     else
     {
+      int sensorValue = analogRead(A1);
       display.print("Done"); // print SUCC for success
       delay(100);        // delay in between reads for stability
       splashScreen = 0;
       mainBreath = 1;
 //      firstRun = 0;
       minReading = sensorValue;
-      maxReading = minReading+300;
+//      maxReading = minReading+300;
+      maxReading = minReading+600;
     }
 
   }
